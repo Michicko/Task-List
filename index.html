@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <title>Task List</title>
+    <style>
+        .delete-item{
+           cursor: pointer;
+        }
+        .msg{
+            width:auto;
+            border: 1px solid;
+            padding: 10px;
+            margin: 20px;
+            /* color: grey; */
+            text-align: center;
+        }
+        .msg-error{
+            border-color: #d32f2f;
+            background-color: #ef5350;
+            color:#fff;
+        }
+        .msg-success{
+            border-color: #00695c;
+            background-color: #8bc24a;
+            color:#fff;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div id="main" class="card">
+            <div class="card-content">
+              <span class="card-title">Task List</span>
+              <div class="row">
+                <form id="task-form">
+                  <div class="input-fielf col s12">
+                    <input type="text" name="task" id="task" />
+                    <label for="task">New Task</label>
+                  </div>
+                  <input type="submit" value="add task" class="btn" />
+                </form>
+              </div>
+            </div>
+            <!-- Insert alert here -->
+            <div class="card-action">
+              <h5 id="task-title">Tasks</h5>
+              <div class="input-field col s12">
+                <input type="text" name="filter" id="filter" />
+                <label for="task">Filter Task</label>
+              </div>
+              <ul class="collection">
+
+              </ul>
+              <a href="#" class="clear-task btn black">Clear tasks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
